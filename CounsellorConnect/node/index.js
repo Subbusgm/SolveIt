@@ -1,7 +1,8 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');  // Import cors here
-const studentRoutes = require('./routes/StudentRoutes'); // import student routes
+const studentRoutes = require('./routes/StudentRoutes');
+const facultyRoutes = require('./routes/facultyRoutes')
 
 dotenv.config();
 
@@ -11,7 +12,7 @@ app.use(cors());  // Use CORS after initializing app
 app.use(express.json());  // Middleware to parse JSON bodies
 
 // Use the student routes
-app.use('/api', studentRoutes);
+app.use('/api', studentRoutes,facultyRoutes);
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {

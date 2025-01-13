@@ -39,7 +39,7 @@ const StudentRegistration = () => {
     e.preventDefault();
     if (validateForm()) {
       try {
-        const response = await fetch("http://localhost:5000/api/register/student", {
+        const response = await fetch("http://localhost:5000/api/student/register", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
@@ -65,9 +65,9 @@ const StudentRegistration = () => {
       <div className="register-container">
         <div className="register-form">
           <h2>Student Registration</h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="reg-form">
             <div className="form-group">
-              <label htmlFor="firstName">First Name</label>
+              <label htmlFor="firstName" >First Name</label>
               <input
                 type="text"
                 id="firstName"

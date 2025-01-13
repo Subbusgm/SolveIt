@@ -1,32 +1,33 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="header">
       <header className="header-content">
-        <a href="#logo" className="logo">
+        <Link to="/" className="logo">
           <img src="clogo.png" alt="CC" className="logo-icon" />
           <span className="logo-text">CounselorConnect</span>
-        </a>
+        </Link>
 
         <nav className="nav">
-          <a href="#home" className="nav-link">
+          <Link to="/home" className="nav-link">
             Home
-          </a>
-          <a href="#Feedback" className="nav-link">
+          </Link>
+          <Link to="/feedback" className="nav-link">
             Feedback
-          </a>
-          <a href="#complaints" className="nav-link">
-            Complaints
-          </a>
-          <a href="#about" className="nav-link">
+          </Link>
+          <Link to="/sem-registration" className="nav-link">
+            Semester Registration
+          </Link>
+          <Link to="/about" className="nav-link">
             About
-          </a>
+          </Link>
         </nav>
 
-        <a href="#contact" className="contact-button">
+        <Link to="/contact" className="contact-button">
           Contact Us
-        </a>
+        </Link>
 
         <button type="button" className="menu-button">
           <img src="option.jpg" alt="menu-button" className="menu-icon" />
