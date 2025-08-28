@@ -35,7 +35,6 @@ const StudentLogin = () => {
         if (response.ok) {
           localStorage.setItem("token", data.token); // Store token in localStorage
           alert("Login successful!");
-          navigate(`/student/profile/${data.usn}`);
         } else {
           alert(data.message || "Login failed!");
         }
